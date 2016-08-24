@@ -3,6 +3,7 @@ import sys
 import math
 import yaml
 import settings as sett
+import sympy
 
 def get_elements_list(poscar='POSCAR'):
     """
@@ -61,7 +62,7 @@ def write_incar(poscar='POSCAR', calc='relaxation', **ext_sett):
 def write_kpoints(poscar='POSCAR', scheme='auto', **ext_sett):
     """
     """
-    k_div = 50
+    k_div = 40
     kp_path = os.path.join(os.path.dirname(poscar), 'KPOINTS')
     with open(kp_path, 'w') as fkp:
         fkp.write('KPOINTS\n0\n')
@@ -78,7 +79,7 @@ def write_vasp_input(poscar='POSCAR'):
     pot_enmax = write_potcar(poscar)
     encut = roundup(1.3*pot_enmax)
     ext_sett = {}
-    ext_sett['ENCUT'] = encut
+    ext_sett['ENCUT'] = 520
     ext_sett['ISPIN'] = 2
     write_incar(poscar, calc='relaxation', **ext_sett)
     ext_sett['ISTART'] = 1

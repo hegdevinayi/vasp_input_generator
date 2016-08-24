@@ -3,12 +3,11 @@ SYSTEM = system
 PREC = ACC
 ISTART = 0
 ICHARG = 2
-ENCUT = 520 eV
 
 # electronic
 LREAL = False
-ISPIN = 0
-ALGO = Fast
+ISPIN = 1
+ALGO = Normal
 ISMEAR = 0
 SIGMA = 0.2
 EDIFF = 1E-6
@@ -27,5 +26,5 @@ LCHARG = .TRUE.
 
 # parallelization
 LPLANE = .TRUE.
-NPAR = 24
-KPAR = 12
+NCORE = 12
+KPAR = 4

@@ -1,6 +1,6 @@
-54_pbe:
-  path: /home/hegde/Codes/vasp_potentials/54/potpaw_pbe
-  pot:
+52_pbe:
+  path: /home/hegde/Codes/vasp_potentials/52/potpaw_pbe
+  pot: &id001
     Ac: Ac
     Ag: Ag
     Al: Al
@@ -96,3 +96,6 @@
     Yb: Yb_2
     Zn: Zn
     Zr: Zr_sv
+54_pbe:
+  path: /home/hegde/Codes/vasp_potentials/54/potpaw_pbe
+  pot: *id001

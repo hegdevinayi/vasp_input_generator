@@ -1,0 +1,28 @@
+# general
+SYSTEM = system
+PREC = ACC
+ISTART = 1
+ICHARG = 1
+
+# electronic
+LREAL = False
+ISPIN = 2
+ALGO = Normal
+ISMEAR = -5
+SIGMA = 0.2
+EDIFF = 1E-6
+NELMIN = 5
+NELM = 60
+
+# ionic
+NSW = 0
+IBRION = -1
+ISIF = 2
+
+# output
+LCHARG = .TRUE.
+
+# parallelization
+LPLANE = .TRUE.
+NCORE = 12
+KPAR = 4

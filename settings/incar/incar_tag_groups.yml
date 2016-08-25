@@ -1,0 +1,54 @@
+!!python/object/apply:collections.OrderedDict
+- - - control
+    - - istart
+      - icharg
+      - prec
+      - isym
+      - lreal
+      - lmaxmix
+      - nbands
+      - encut
+  - - electronic_relaxation
+    - - algo
+      - ediff
+      - ismear
+      - sigma
+      - nelmin
+      - nelm
+      - nelmdl
+  - - ionic_relaxation
+    - - ediffg
+      - ibrion
+      - potim
+      - isif
+      - nsw
+  - - dos
+    - - emin
+      - emax
+      - nedos
+  - - write
+    - - lcharg
+      - lwave
+      - lelf
+      - lorbit
+  - - parallelization
+    - - nsim
+      - ncore
+      - npar
+      - kpar
+      - lplane
+  - - spin
+    - - ispin
+      - magmom
+      - lsorbit
+      - lnoncollinear
+  - - hubbard_u
+    - - ldau
+      - ldauprint
+      - ldauu
+      - ldauj
+      - ldaul
+  - - mixing
+    - - amix
+      - bmix
+      - maxmix

@@ -1,5 +1,6 @@
 ALGO: Normal
 EDIFF: 1E-6
+ENCUT: 520 eV
 IBRION: '-1'
 ICHARG: '1'
 ISIF: '2'

@@ -3,6 +3,7 @@ SYSTEM = system
 PREC = ACC
 ISTART = 1
 ICHARG = 1
+ENCUT = 520 eV
 
 # electronic
 LREAL = False

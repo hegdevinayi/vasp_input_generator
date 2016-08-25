@@ -16,7 +16,8 @@ def get_elements_list(poscar='POSCAR'):
 def write_potcar(poscar='POSCAR', xc='PBE', version='54'):
     """
     """
-    pot_sett_path = os.path.join(os.path.dirname(sett.__file__), 'pot_sett.yml')
+    pot_sett_path = os.path.join(os.path.dirname(sett.__file__), 'potcar',\
+                    'pot_sett.yml')
     with open(pot_sett_path, 'r') as fpot_sett:
         pot_sett = yaml.safe_load(fpot_sett)
     base_key = "_".join([version.lower(), xc.lower()])
@@ -43,8 +44,9 @@ def write_potcar(poscar='POSCAR', xc='PBE', version='54'):
 def write_incar(poscar='POSCAR', calc='relaxation', **ext_sett):
     """
     """
-    inc_sett_path = os.path.join(os.path.dirname(sett.__file__),\
-                    'incar_base.yml')
+    incar_settings_file = 'incar_' + calc + '.yml'
+    inc_sett_path = os.path.join(os.path.dirname(sett.__file__), 'incar',\
+                    incar_settings_file)
     with open(inc_sett_path, 'r') as finc_sett:
         inc_sett = yaml.safe_load(finc_sett)
     if ext_sett:
@@ -59,10 +61,9 @@ def write_incar(poscar='POSCAR', calc='relaxation', **ext_sett):
     sys.stdout.flush()
     return 
 
-def write_kpoints(poscar='POSCAR', scheme='auto', **ext_sett):
+def write_kpoints(poscar='POSCAR', scheme='auto', k_div=40, **ext_sett):
     """
     """
-    k_div = 40
     kp_path = os.path.join(os.path.dirname(poscar), 'KPOINTS')
     with open(kp_path, 'w') as fkp:
         fkp.write('KPOINTS\n0\n')

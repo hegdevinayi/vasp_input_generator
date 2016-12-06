@@ -1,4 +1,4 @@
-import yaml 
+import yaml
 from collections import OrderedDict
 
 tag_groups = OrderedDict()
@@ -13,4 +13,3 @@ with open('incar_tag_groups.txt', 'r') as fin:
 
 with open('incar_tag_groups.yml', 'w') as fout:
     yaml.dump(tag_groups, fout, default_flow_style=False)
-    
